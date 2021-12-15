@@ -1,13 +1,17 @@
 version: '3.8'
+
 services:
   db:
     image: mysql:latest
     ports: 
     - 3306:3306
     volumes:
-    - .
+    - WorklogTester:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=Vn,N4r2n9m:%Xv5:;f:528ld5GN?RU/K
       - MYSQL_USER=user
       - MYSQL_PASSWORD=password
       - MYSQL_DATABASE=WorklogTester
+
+volumes:
+  WorklogTester:
